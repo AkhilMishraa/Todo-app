@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Your Notes</h1>
+            <p class="subtitle">Pin your mind here !</p>
+             <button id="helpBtn" class="help-btn" title="Keyboard Shortcuts">⌨️</button>
+        </header>
+
+        <!-- input-section-->
+         <div class="input-section">
+            <input
+                type="text"
+                id="todoInput"
+                placeholder="What needs to be done?"
+                autocomplete="off"
+            >
+            <button id="addBtn">Add Task</button>
+         </div>
+
+         <!--Filter Buttons-->
+         <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+         </div>
+         
+         <!--Todo List-->
+         <ul id="todoList" class="todo-list">
+            <!-- Your Todos will appear here -->
+         </ul>
+
+         <!--Stats Footer-->
+         <div class="stats">
+            <span id="todoCount">0 tasks remaining</span>
+            <button id="clearCompleted">Clear Completed</button>
+         </div>
+    </div>
+    <!-- Help Modal -->
+<div id="helpModal" class="help-modal">
+    <div class="help-content">
+        <h2>⌨️ Keyboard Shortcuts</h2>
+        
+        <h3>Navigation</h3>
+        <ul>
+            <li>
+                <span>Focus input field</span>
+                <kbd>Ctrl + K</kbd>
+            </li>
+            <li>
+                <span>Clear input</span>
+                <kbd>Escape</kbd>
+            </li>
+            <li>
+                <span>Add task</span>
+                <kbd>Enter</kbd>
+            </li>
+        </ul>
+        
+        <h3>Editing</h3>
+        <ul>
+            <li>
+                <span>Save edit</span>
+                <kbd>Enter</kbd>
+            </li>
+            <li>
+                <span>Cancel edit</span>
+                <kbd>Escape</kbd>
+            </li>
+            <li>
+                <span>Edit mode</span>
+                <span>Double-click task</span>
+            </li>
+        </ul>
+        
+        <h3>Actions</h3>
+        <ul>
+            <li>
+                <span>Clear completed</span>
+                <kbd>Ctrl + Shift + C</kbd>
+            </li>
+        </ul>
+        
+        <button class="close-help" onclick="closeHelp()">Got it!</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
